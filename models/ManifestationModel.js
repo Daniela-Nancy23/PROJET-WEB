@@ -63,5 +63,4 @@ const Manifestation = sequelize.define('manifestation', {
 
 module.exports = {Manifestation,sequelize};
 
-module.exports = {Manifestation,sequelize};
 

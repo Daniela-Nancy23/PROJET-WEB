@@ -57,4 +57,3 @@ async function getSalarierCESIById(req ,res) {
 
 
 module.exports={insert_salarierCESI,getSalarierCESIById};
-module.exports={insert_salarierCESI,getSalarierCESIById};

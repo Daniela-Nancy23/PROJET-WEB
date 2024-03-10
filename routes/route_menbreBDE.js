@@ -18,4 +18,3 @@ function menbreBDE(){
 }
 
 module.exports={menbreBDE}
-module.exports={menbreBDE}

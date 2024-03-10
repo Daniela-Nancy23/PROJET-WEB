@@ -48,4 +48,3 @@ const Produit = sequelize.define('produit', {
 
 module.exports = {Produit,sequelize};
 
-module.exports = {Produit,sequelize};

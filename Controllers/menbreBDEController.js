@@ -57,4 +57,3 @@ async function getMenbreBDEById(req ,res) {
 
 
 module.exports={insert_menbreBDE,getMenbreBDEById};
-module.exports={insert_menbreBDE,getMenbreBDEById};

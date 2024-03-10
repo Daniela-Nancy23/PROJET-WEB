@@ -30,4 +30,3 @@ function manifestation(){
 }
 
 module.exports={manifestation}
-module.exports={manifestation}

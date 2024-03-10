@@ -49,11 +49,6 @@ app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
 //route manifestation
 app.use("/manifestion",routes_manifestion.manifestation());
 
-//route manifestation
-app.use("/manifestion",routes_manifestion.manifestation());
-
-//route manifestation
-app.use("/manifestion",routes_manifestion.manifestation());
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);

@@ -26,4 +26,3 @@ function produit(){
 }
 
 module.exports={produit}
-module.exports={produit}

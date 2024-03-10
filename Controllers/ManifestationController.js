@@ -178,6 +178,3 @@ module.exports={insert_Manifestation,getManifestationById,deleteManifestation,up
     update_recurrente_Manifestation,update_dateDebut_Manifestation,update_dateFin_Manifestation,update_image_Manifestation};
 
 
-module.exports={insert_Manifestation,getManifestationById,deleteManifestation,update_nom_Manifestation,
-    update_description_Manifestation,update_payant_Manifestation,
-    update_recurrente_Manifestation,update_dateDebut_Manifestation,update_dateFin_Manifestation,update_image_Manifestation};

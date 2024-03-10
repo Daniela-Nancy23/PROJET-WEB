@@ -43,4 +43,3 @@ const Etudiant = sequelize.define('etudiant', {
 });
 
 module.exports={Etudiant}
-module.exports={Etudiant}

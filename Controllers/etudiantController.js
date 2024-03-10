@@ -57,4 +57,3 @@ async function getEtudiantById(req ,res) {
 
 
 module.exports={insert_etudiant,getEtudiantById};
-module.exports={insert_etudiant,getEtudiantById};

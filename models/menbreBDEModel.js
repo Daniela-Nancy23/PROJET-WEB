@@ -43,4 +43,3 @@ const menbreBDE = sequelize.define('menbreBDE', {
 });
 
 module.exports={menbreBDE}
-module.exports={menbreBDE}

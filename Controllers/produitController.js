@@ -141,7 +141,3 @@ module.exports={insert_produit,getProductById,deleteproduit,update_nom_produit,
     update_description_produit,update_prix_produit,
     update_categorie_produit,update_image_produit};
 
-
-module.exports={insert_produit,getProductById,deleteproduit,update_nom_produit,
-    update_description_produit,update_prix_produit,
-    update_categorie_produit,update_image_produit};

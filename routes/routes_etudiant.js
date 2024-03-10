@@ -16,4 +16,3 @@ function etudiant(){
 }
 
 module.exports={etudiant}
-module.exports={etudiant}

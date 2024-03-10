@@ -43,4 +43,3 @@ const salarierCESI = sequelize.define('salarierCESI', {
 });
 
 module.exports={salarierCESI}
-module.exports={salarierCESI}

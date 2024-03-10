@@ -18,4 +18,3 @@ function salarierCESI(){
 }
 
 module.exports={salarierCESI}
-module.exports={salarierCESI}
