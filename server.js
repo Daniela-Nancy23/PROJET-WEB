@@ -13,6 +13,8 @@ const routes_salarierCESI=require("./routes/routes_salarierCESI");
 const routes_manifestion=require("./routes/routes_manifestion");
 const routes_categorie=require("./routes/routes_categorie");
 const routes_boite_idees=require("./routes/routes_boite_idees");
+const routes_commande=require("./routes/routes_commande");
+const routes_evenement_passer=require("./routes/routes_evenement_passer");
 
 
 const hostname = '127.0.0.1';
@@ -52,10 +54,17 @@ app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
 //route manifestation
 app.use("/manifestion",routes_manifestion.manifestation());
 
+//route categorie
+app.use("/categorie",routes_categorie.Categorie());
 
 //route idee
 app.use("/idee",routes_boite_idees.boite_idee());
 
+//route commande
+app.use("/idee",routes_commande.commande());
+
+//route evenement_passer
+app.use("/evenement_passer",routes_evenement_passer.evenement_passer());
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
