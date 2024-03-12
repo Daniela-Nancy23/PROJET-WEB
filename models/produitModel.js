@@ -9,6 +9,8 @@ const sequelize = new Sequelize(
     }
 );
 
+const menbreBDEModel=require("menbreBDEModel");
+
 
 const Produit = sequelize.define('produit', {
     id_produit: {
@@ -45,6 +47,9 @@ const Produit = sequelize.define('produit', {
     // updatedAt: false
 
 });
+
+Produit.belongsTo(menbreBDEModel.menbreBDE, { foreignKey: 'id_menbreBDE' });
+
 
 module.exports = {Produit,sequelize};
 

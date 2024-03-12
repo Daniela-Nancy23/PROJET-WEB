@@ -7,12 +7,14 @@ async function insert_Manifestation(req,res) {
 
     ManifestationModel.Manifestation.create({
         nom: data.nom,
+        id_menbreBDE:data.id_menbreBDE,
         description: data.description,
         payant: data.payant,
         recurrente: data.recurrente,
         date_debut: data.date_debut,
         date_fin: data.date_fin,
         image: data.image
+
 
     })
         .then(book => {
@@ -48,6 +50,29 @@ async function getManifestationById(req ,res) {
         return null;
     }
 }
+
+
+async function getAllManifestation(req ,res) {
+    try {
+        const manifestation = await ManifestationModel.Manifestation.findAll({
+            order: [['nom', 'DESC']],
+
+        });
+        if (manifestation) {
+            res.json(manifestation);
+
+        } else {
+            res.send('manifestation non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération de la manifestation:', error);
+        return null;
+    }
+}
+
+
+
 
 async function deleteManifestation(req,res){
     const id = req.params.id;
@@ -175,6 +200,6 @@ async function update_image_Manifestation(req,res){
 
 module.exports={insert_Manifestation,getManifestationById,deleteManifestation,update_nom_Manifestation,
     update_description_Manifestation,update_payant_Manifestation,
-    update_recurrente_Manifestation,update_dateDebut_Manifestation,update_dateFin_Manifestation,update_image_Manifestation};
+    update_recurrente_Manifestation,update_dateDebut_Manifestation,update_dateFin_Manifestation,update_image_Manifestation,getAllManifestation};
 
 

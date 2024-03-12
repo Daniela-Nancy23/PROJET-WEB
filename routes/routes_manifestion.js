@@ -9,8 +9,13 @@ function manifestation(){
     //route permettant d'inserer  un produit dans la BD
     router.post('/insert',ManifestationController.insert_Manifestation);
 
+    //route permettant de selectioner tout les produits dans la BD
+    router.get('/all',ManifestationController.getAllManifestation);
+
     //route permettant de selectioner un produit dans la BD
     router.get('/:id',ManifestationController.getManifestationById);
+
+
 
     //route permettant de supprimer un produit dans la BD
     router.delete('/:id',ManifestationController.deleteManifestation);

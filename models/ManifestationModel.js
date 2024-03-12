@@ -9,6 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
+const menbreBDE=require("menbreBDEModel");
 
 const Manifestation = sequelize.define('manifestation', {
     id_manifestation: {
@@ -18,11 +19,6 @@ const Manifestation = sequelize.define('manifestation', {
         primaryKey: true
     },
 
-    id_menbreBDE: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        unique: true
-    },
     nom: {
         type: DataTypes.STRING,
         allowNull: false
@@ -60,6 +56,9 @@ const Manifestation = sequelize.define('manifestation', {
     // updatedAt: false
 
 });
+
+Manifestation.belongsTo(menbreBDEModel.menbreBDE, { foreignKey: 'id_menbreBDE' });
+
 
 module.exports = {Manifestation,sequelize};
 

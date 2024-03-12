@@ -47,6 +47,29 @@ async function getProductById(req ,res) {
     }
 }
 
+
+async function getAllProduct(req ,res) {
+
+
+
+    try {
+        const Product = await produitModel.Produit.findAll({
+            order: [['nom', 'DESC']],
+
+        });
+        if (Product) {
+            res.json(Product);
+       } else {
+           res.send('Produit non trouvé');
+           return null;
+       }
+    } catch (error) {
+        console.log('Erreur lors de la récupération du produit:', error);
+        return null;
+    }
+}
+
+
 async function deleteproduit(req,res){
     const id = req.params.id;
     await produitModel.Produit.destroy({ where: { id_produit: id } });
@@ -139,5 +162,5 @@ async function update_image_produit(req,res){
 
 module.exports={insert_produit,getProductById,deleteproduit,update_nom_produit,
     update_description_produit,update_prix_produit,
-    update_categorie_produit,update_image_produit};
+    update_categorie_produit,update_image_produit,getAllProduct};
 

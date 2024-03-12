@@ -11,6 +11,9 @@ const routes_etudiant=require("./routes/routes_etudiant");
 const routes_menbreBDE=require("./routes/route_menbreBDE");
 const routes_salarierCESI=require("./routes/routes_salarierCESI");
 const routes_manifestion=require("./routes/routes_manifestion");
+const routes_categorie=require("./routes/routes_categorie");
+const routes_boite_idees=require("./routes/routes_boite_idees");
+
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -48,6 +51,10 @@ app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
 
 //route manifestation
 app.use("/manifestion",routes_manifestion.manifestation());
+
+
+//route idee
+app.use("/idee",routes_boite_idees.boite_idee());
 
 
 app.listen(port, hostname, () => {

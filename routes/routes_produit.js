@@ -9,8 +9,14 @@ function produit(){
     //route permettant d'inserer  un produit dans la BD
     router.post('/insert',produitcontroller.insert_produit);
 
+    //route permettant de selectioner tout les  produits dans la BD
+    router.get('/all',produitcontroller.getAllProduct);
+
     //route permettant de selectioner un produit dans la BD
-    router.get('/:id',produitcontroller.getProductById);
+     router.get('/:id',produitcontroller.getProductById);
+
+
+
 
     //route permettant de supprimer un produit dans la BD
     router.delete('/:id',produitcontroller.deleteproduit);
