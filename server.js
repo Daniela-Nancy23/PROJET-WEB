@@ -3,8 +3,13 @@ const bodyParser = require('body-parser');
 
 const express = require('express');
 const app = express();
-
+const cors = require('cors');
 app.use(bodyParser.json()); // pour les requêtes JSON
+
+app.use(cors());
+
+
+const set_CORS=require("./middlewares/set_CORS")
 const produitModel = require("./models/produitModel");
 const routes_produit=require("./routes/routes_produit");
 const routes_etudiant=require("./routes/routes_etudiant");
@@ -41,6 +46,7 @@ produitModel.sequelize.sync({ force: false })
     .catch(error => {
         console.error('Erreur lors de la synchronisation de la base de données:', error);
     });
+
 
 
 //route produit
@@ -80,6 +86,7 @@ app.use("/photo_evenement",routes_photo_evenement.photo_evenement());
 
 //route commentaire_evenement
 app.use("/commentaire_evenement",routes_commentaire_evenement.commentaire_evenement());
+
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);

@@ -3,9 +3,9 @@ const {Etudiant} = require("../models/etudaintModel");
 
 
 async function insert_etudiant(req,res) {
-    const data = req.body; // Les données à insérer
-
-    etudiantModel.Etudiant.create({
+    const data =  req.body.data; // Les données à insérer
+    console.log(data);
+   await etudiantModel.Etudiant.create({
         email: data.email,
         nom: data.nom,
         prenom: data.prenom,

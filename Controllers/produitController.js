@@ -80,8 +80,8 @@ async function deleteproduit(req,res){
 
 async function update_nom_produit(req,res){
     const id = req.params.id;
-    const data = req.body; // Les données à insérer
-
+    const data = req.body.data; // Les données à insérer
+        console.log(data.nom);
      await Produit.update({
         nom: data.nom,
     }, {
@@ -89,7 +89,7 @@ async function update_nom_produit(req,res){
             id_produit: id
         }
     });
-    res.send(`votre produit a ete mis à jour: ${id}`);
+    res.send(`Le nom de votre produit a ete mis à jour: ${id}`);
 
 }
 
