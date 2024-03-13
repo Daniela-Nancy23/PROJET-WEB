@@ -9,6 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
+
 const etudaintModel=require("./etudaintModel");
 const produitModel=require("./produitModel");
 

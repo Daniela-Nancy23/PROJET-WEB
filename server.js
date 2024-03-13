@@ -79,7 +79,7 @@ app.use("/photo_evenement",routes_photo_evenement.photo_evenement());
 
 
 //route commentaire_evenement
-app.use("/photo_evenement",routes_commentaire_evenement.commentaire_evenement());
+app.use("/commentaire_evenement",routes_commentaire_evenement.commentaire_evenement());
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);

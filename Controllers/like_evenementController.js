@@ -55,7 +55,7 @@ async function getNbreLikeById(req ,res) {
 async function deleteLike_evenement(req,res){
     const id = req.params.id;
     const id_etudiant = req.params.id_etudiant;
-    await like_evenementModel.Like_evenement.destroy({ where: { id: id , id_etudiant: id_etudiant} });
+    await like_evenementModel.Like_evenement.destroy({ where: { id_evenement_passer: id , id_etudiant: id_etudiant} });
     res.send(`Votre like a bien ete supprimer`);
 
 
