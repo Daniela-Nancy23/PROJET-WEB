@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Antic&display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Angkor&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link href="connexion.css" rel="stylesheet" />
+        <title>BDE-Connexion</title>
+    </head>
+    <body>
+        <h1 class="inscription"><svg width="100" height="72"
+                viewBox="0 0 100 72" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M81.0174 70.523H64.6581C63.3727 70.523 62.3211 69.5312 62.3211 68.3191V60.973C62.3211 59.7609 63.3727 58.7691 64.6581 58.7691H81.0174C84.4645 58.7691 87.2495 56.1429 87.2495 52.8922V17.6307C87.2495 14.3801 84.4645 11.7538 81.0174 11.7538H64.6581C63.3727 11.7538 62.3211 10.7621 62.3211 9.54998V2.20384C62.3211 0.991729 63.3727 0 64.6581 0H81.0174C91.3393 0 99.7137 7.8971 99.7137 17.6307V52.8922C99.7137 62.6259 91.3393 70.523 81.0174 70.523ZM71.864 33.6086L39.1454 2.7548C36.2241 0 31.1605 1.92836 31.1605 5.87691V23.5077H4.67408C2.08386 23.5077 0 25.4727 0 27.9153V45.5461C0 47.9887 2.08386 49.9538 4.67408 49.9538H31.1605V67.5845C31.1605 71.5331 36.2241 73.4614 39.1454 70.7066L71.864 39.8528C73.6752 38.1265 73.6752 35.3349 71.864 33.6086Z"
+                    fill="#FE8B04" />
+            </svg>Connexion</h1>
+        <div class="container-image">
+            <img src="images/user.svg" alt="user">
+            <div class="container">
+                <form action method="post" id="inscription-form">
+                    <div class="insert">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="entrer votre email" required>
+                    </div>
+                    <div class="insert">
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password"
+                            placeholder="entrer votre mot de passe" required>
+                    </div>
+                    <div>
+                        <a href="">mot de passe oublié</a>
+                    </div>
+                    <div>
+                        vous n'avez pas de compte , <a href="inscription.html">creez un</a>
+                    </div>
+
+                    <div class="button">
+                        <button id="submit-btn" class="submit"
+                            type="submit">
+                            Se connecter</button>
+                    </div>
+                </form>
+                
+            </div>
+           
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+            <!-- Inclure le fichier JavaScript externe -->
+            <script src="connexion.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,140 @@
+h1{
+    width: 817px;
+  color: rgba(255,169,3,1);
+  position: absolute;
+  top: 20px;
+  left: 436px;
+  font-family: Angkor;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.button{
+    width: 250px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 400px;
+  left: 175px;
+  font-family: Angkor;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+ 
+}
+
+.container {
+    width:600px; /* Définissez la largeur du conteneur du formulaire selon vos préférences */
+    margin: 0 auto; /* Cela centrerait le conteneur horizontalement */
+    padding: 20px; /* Ajoutez un peu de remplissage pour l'apparence */
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9; /* Ajoutez une bordure pour une meilleure séparation */
+    margin-top: 120px;
+    border-radius:20px;
+    align-items: center;
+    
+
+}
+.insert{
+    margin-bottom: 20px; /* Espacement entre chaque groupe de formulaire */
+
+}
+
+label {
+    display: block; /* Permet de mettre chaque label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement entre le label et le champ */
+}
+/* Styles pour les champs lorsqu'ils ont le focus */
+input:focus,
+textarea:focus {
+    border: 2px solid orange; /* Bordure orange */
+    outline: none; /* Supprimer l'outline par défaut */
+}
+.container-image{
+    display: inline-flex; /* Utiliser Flexbox */
+    align-items: center; /* Aligner verticalement */
+}
+.container-image img{
+    margin-right: 20px; /* Espacement entre l'image et le conteneur du formulaire */
+   margin-left:20%;
+}
+
+.custom-checkbox {
+    /* Masquer l'apparence native de la case à cocher */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Définir la taille de la case à cocher */
+    width: 20px;
+    height: 20px;
+    /* Style de la bordure */
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    /* Style de fond */
+    background-color: #fff;
+    /* Espacement entre la case à cocher et le texte */
+    margin-right: 5px;
+}
+
+/* Styling de la case à cocher cochée */
+.custom-checkbox:checked {
+    background-color: #eba409; /* Couleur de fond lorsque la case est cochée */
+    border-color: #f9af02; /* Couleur de la bordure lorsque la case est cochée */
+}
+
+/* Styling de la marque de validation */
+.custom-checkbox:checked::before {
+    content: '\2713'; /* Unicode du symbole de la marque */
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px; /* Taille de la police du symbole de la marque */
+    line-height: 18px; /* Hauteur de ligne pour centrer verticalement */
+    text-align: center; /* Centrer horizontalement */
+    color: #fff; /* Couleur de la marque */
+}
+.form-check-label {
+    display: inline-block;
+    margin-left: 5px; /* Ajustez cette valeur selon vos besoins */
+}
+#submit-btn {
+    border-radius: 5px; /* Bords arrondis */
+    background-color: #888c92; /* Couleur de fond par défaut */
+    color: #fff; /* Couleur du texte */
+}
+
+#submit-btn:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+#submit-btn:disabled {
+    background-color: #ccc; /* Couleur de fond lorsque le bouton est désactivé */
+}
+
+#submit-btn.valid {
+    background-color: orange; /* Couleur de fond lorsque tous les champs sont remplis */
+}
+/* Styles pour le select */
+select {
+    border: 2px solid orange; /* Couleur de la bordure */
+    border-radius: 5px; /* Bords arrondis */
+    background-color: white; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    padding: 5px; /* Espacement interne */
+    appearance: none; /* Masquer l'apparence native */
+}
+
+/* Styles pour la surbrillance (focus) du select */
+select:focus {
+    border-color: orange; /* Couleur de la bordure lorsqu'il a le focus */
+    outline: none; /* Supprimer la surbrillance par défaut */
+}
+
+/* Styles pour les options du select */
+select option {
+    background-color: white; /* Couleur de fond des options */
+    color: black; /* Couleur du texte des options */
+}
+
+
