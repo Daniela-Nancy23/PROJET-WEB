@@ -5,14 +5,14 @@ const {Categorie} = require("../models/categorieModel");
  async function insert_categorie(req,res) {
      const data = req.body; // Les données à insérer
 
-     produitModel.Produit.create({
+     categorieModel.Categorie.create({
             nom: data.nom,
             id_menbreBDE: data.id_menbreBDE,
 
 
         })
             .then(book => {
-                console.log('Categorie créé avec succès:', Produit);
+                console.log('Categorie créé avec succès:', Categorie);
                 res.send(`Categorie inserer avec success`);
             })
             .catch(error => {

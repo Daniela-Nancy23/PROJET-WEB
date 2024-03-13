@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
+const etudaintModel=require("./etudaintModel");
 
 
 const Boite_idee = sequelize.define('boite_idee', {
@@ -18,6 +18,12 @@ const Boite_idee = sequelize.define('boite_idee', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+    },
+
+    id_etudiant:{
+        type: DataTypes.STRING,
+        allowNull: false
+
     },
     nbr_vote: {
         type: DataTypes.INTEGER,

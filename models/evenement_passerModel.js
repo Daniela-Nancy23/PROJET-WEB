@@ -9,11 +9,11 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
-const ManifestationModel=require("ManifestationModel");
+const etudaintModel=require("./etudaintModel");
+const ManifestationModel=require("./ManifestationModel");
 
 
-const Evenement = sequelize.define('evenement_passer', {
+const evenement_passer = sequelize.define('evenement_passer', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,

@@ -9,8 +9,8 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
-const evenement_passerModel=require("evenement_passerModel");
+const etudaintModel=require("./etudaintModel");
+const evenement_passerModel=require("./evenement_passerModel");
 
 
 const Commentaire_evenement = sequelize.define('commentaire_evenement', {
@@ -20,6 +20,7 @@ const Commentaire_evenement = sequelize.define('commentaire_evenement', {
         allowNull: false,
         primaryKey: true
     },
+
     commentaire: {
         type: DataTypes.STRING,
 

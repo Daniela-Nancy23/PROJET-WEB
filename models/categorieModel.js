@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
-const menbreBDEModel=require("menbreBDEModel");
+const menbreBDEModel=require("./menbreBDEModel");
 
 const Categorie = sequelize.define('categorie', {
     id_categorie: {
@@ -17,6 +17,11 @@ const Categorie = sequelize.define('categorie', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+    },
+
+    id_menbreBDE:{
+        type: DataTypes.STRING,
+        allowNull: false,
     },
 
     nom: {

@@ -9,8 +9,8 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
-const evenement_passerModel=require("evenement_passerModel");
+const etudaintModel=require("./etudaintModel");
+const evenement_passerModel=require("./evenement_passerModel");
 
 
 const Photo_evenement = sequelize.define('photo_evenement', {
@@ -20,6 +20,7 @@ const Photo_evenement = sequelize.define('photo_evenement', {
         allowNull: false,
         primaryKey: true
     },
+
     image: {
         type: DataTypes.STRING,
 

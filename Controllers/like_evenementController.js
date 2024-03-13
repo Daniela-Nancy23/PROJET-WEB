@@ -11,6 +11,7 @@ async function insert_like(req,res) {
         liker: data.liker,
     })
         .then(book => {
+            console.log(data.value);
             res.send(`like reussie`);
         })
         .catch(error => {

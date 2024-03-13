@@ -14,7 +14,7 @@ function Categorie(){
 
 
     //route permettant de supprimer un produit dans la BD
-    router.delete('/:id',categorieController.deleteCategorie());
+    router.delete('/:id',categorieController.deleteCategorie);
 
     //routes permettant de mettre ajour un produit dans la BD
         router.put('/nom/:id',categorieController.update_nom_categorie);

@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
-const menbreBDEModel=require("menbreBDEModel");
+const menbreBDEModel=require("./menbreBDEModel");
 
 
 const Produit = sequelize.define('produit', {

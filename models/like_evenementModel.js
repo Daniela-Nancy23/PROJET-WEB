@@ -9,8 +9,8 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
-const evenement_passerModel=require("evenement_passerModel");
+const etudaintModel=require("./etudaintModel");
+const evenement_passerModel=require("./evenement_passerModel");
 
 
 const Like_evenement = sequelize.define('like_evenement', {
@@ -20,6 +20,9 @@ const Like_evenement = sequelize.define('like_evenement', {
         allowNull: false,
         primaryKey: true
     },
+
+
+
     liker: {
         type: DataTypes.BOOLEAN,
 

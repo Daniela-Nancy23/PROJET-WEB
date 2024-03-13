@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     }
 );
 
-const menbreBDE=require("menbreBDEModel");
+const menbreBDEModel=require("./menbreBDEModel");
 
 const Manifestation = sequelize.define('manifestation', {
     id_manifestation: {

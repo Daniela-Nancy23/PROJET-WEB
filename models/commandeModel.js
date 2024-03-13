@@ -9,8 +9,8 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("etudaintModel");
-const produitModel=require("produitModel");
+const etudaintModel=require("./etudaintModel");
+const produitModel=require("./produitModel");
 
 
 const Commande = sequelize.define('commande', {
@@ -20,6 +20,15 @@ const Commande = sequelize.define('commande', {
         allowNull: false,
         primaryKey: true
     },
+    id_etudiant:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    id_produit:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+
     nom: {
         type: DataTypes.STRING,
         allowNull: false
