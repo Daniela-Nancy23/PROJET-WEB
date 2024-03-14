@@ -14,7 +14,7 @@ function photo_evenement(){
 
 
     //route permettant de supprimer une photo_evenement_passer dans la BD
-    router.delete('/:id?:id_etudiant',photo_evenementController.deletePhoto_evenement);
+    router.delete('/:id/:id_etudiant',photo_evenementController.deletePhoto_evenement);
 
 
     return router;

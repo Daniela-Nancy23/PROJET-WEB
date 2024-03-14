@@ -15,6 +15,18 @@ function produit(){
     //route permettant de selectioner un produit dans la BD
      router.get('/:id',produitcontroller.getProductById);
 
+    //route permettant de selectioner un produit dans la BD
+    router.get('/recherche/:recherche', (req,res)=>{
+
+        if(Number.isInteger(Number(req.params.recherche))){
+           // res.send('tata')
+            produitcontroller.getAllProductByPrix(req,res);
+        }else {
+           // res.send('toto')
+            produitcontroller.getAllProductByCategorie(req,res);
+        }
+    });
+
 
 
 

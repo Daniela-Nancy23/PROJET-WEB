@@ -48,6 +48,27 @@ async function getEtudiantById(req ,res) {
 
 
 
+async function getALLEtudiant(req ,res) {
+
+
+
+    try {
+        const Etudian = await etudiantModel.Etudiant.findAll({
+            order: [['nom', 'DESC']],
+
+        });
+        if (Etudian) {
+            res.json(Etudian);
+
+        } else {
+            res.send('etudaint non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération de l etudaint:', error);
+        return null;
+    }
+}
 
 
 
@@ -56,4 +77,5 @@ async function getEtudiantById(req ,res) {
 
 
 
-module.exports={insert_etudiant,getEtudiantById};
+
+module.exports={insert_etudiant,getEtudiantById,getALLEtudiant};

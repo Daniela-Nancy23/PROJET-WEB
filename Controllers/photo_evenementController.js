@@ -54,7 +54,6 @@ async function deletePhoto_evenement(req,res){
     await like_evenementModel.Like_evenement.destroy({ where: { id: id , id_etudiant: id_etudiant} });
     res.send(`Votre photo a bien ete supprimer`);
 
-
 }
 
 

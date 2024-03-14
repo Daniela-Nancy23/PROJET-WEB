@@ -23,6 +23,8 @@ const routes_evenement_passer=require("./routes/routes_evenement_passer");
 const routes_Like_evenement=require("./routes/routes_Like_evenement");
 const routes_photo_evenement=require("./routes/routes_photo_evenement");
 const routes_commentaire_evenement=require("./routes/routes_commentaire_evenement");
+const routes_inscrit_manifestion=require("./routes/routes_inscrit_manifestion");
+
 
 
 
@@ -83,9 +85,13 @@ app.use("/like_evenement",routes_Like_evenement.like_evenement());
 //route photo_evenement
 app.use("/photo_evenement",routes_photo_evenement.photo_evenement());
 
-
 //route commentaire_evenement
 app.use("/commentaire_evenement",routes_commentaire_evenement.commentaire_evenement());
+
+
+//route inscrit_manifestation
+app.use("/inscrit_manifestation",routes_inscrit_manifestion.inscrit_manifestation());
+
 
 
 app.listen(port, hostname, () => {

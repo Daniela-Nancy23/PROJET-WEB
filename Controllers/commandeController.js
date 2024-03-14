@@ -1,5 +1,6 @@
 const commandeModel = require('../models/commandeModel');
 const {commande} = require("../models/commandeModel");
+const produitModel = require("../models/produitModel");
 
 
  async function insert_Commande(req,res) {
@@ -29,16 +30,65 @@ async function getAllICommande(req ,res) {
 
 
     try {
-        const idees = await commandeModel.Commande.findAll({
+        const commande = await commandeModel.Commande.findAll({
             order: [['nom', 'DESC']],
 
         });
-        if (idees) {
-            res.json(idees);
+        if (commande) {
+            res.json(commande);
        } else {
            res.send('Commandes non trouvé');
            return null;
        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération des Commandes:', error);
+        return null;
+    }
+}
+
+
+async function getCommandeByUser(req ,res) {
+
+
+    const id = req.params.id
+
+    try {
+        const Commande = await commandeModel.Commande.findAll({
+            where: {id_etudiant: id},
+
+        });
+        if (Commande) {
+
+            res.json(Commande);
+
+        } else {
+            res.send('Produit non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération du produit:', error);
+        return null;
+    }
+}
+
+
+async function getCommandeReccurente(req ,res) {
+
+
+
+    try {
+        const Commande = await commandeModel.Commande.findAll({
+            attributes: ['id_commande', 'createdAt', 'id_etudiant', [sequelize.fn('COUNT', sequelize.col('id_commande')), 'frequency']],
+            group: ['id_commande', 'createdAt', 'id_etudiant'],
+            order: [[sequelize.fn('COUNT', sequelize.col('id_commande')), 'DESC']],
+            limit: 3
+        });
+        if (Commande) {
+            res.json(Commande);
+        } else {
+            res.send('Commandes non trouvé');
+            return null;
+        }
     } catch (error) {
         console.log('Erreur lors de la récupération des Commandes:', error);
         return null;
@@ -58,5 +108,5 @@ async function deleteCommande(req,res){
 
 
 
-module.exports={insert_Commande,getAllICommande,deleteCommande};
+module.exports={insert_Commande,getAllICommande,deleteCommande,getCommandeReccurente,getCommandeByUser};
 

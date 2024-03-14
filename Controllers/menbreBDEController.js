@@ -49,11 +49,32 @@ async function getMenbreBDEById(req ,res) {
 
 
 
+async function getALLMenbreBDE(req ,res) {
+
+
+    const id = req.params.id
+
+    try {
+        const menbrebde = await menbreBDEModel.menbreBDE.findAll({
+            order: [['nom', 'DESC']],
+
+        });
+        if (menbrebde) {
+            res.json(menbrebde);
+
+        } else {
+            res.send('menbreBDE non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération du menbreBDE:', error);
+        return null;
+    }
+}
 
 
 
 
 
 
-
-module.exports={insert_menbreBDE,getMenbreBDEById};
+module.exports={insert_menbreBDE,getMenbreBDEById,getALLMenbreBDE};

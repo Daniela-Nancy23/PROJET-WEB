@@ -70,6 +70,52 @@ async function getAllProduct(req ,res) {
 }
 
 
+async function getAllProductByCategorie(req ,res) {
+
+    const recherche = req.params.recherche
+
+    try {
+        const Product = await produitModel.Produit.findAll({
+            where: {categorie: recherche}
+
+        });
+        if (Product) {
+            res.json(Product);
+        } else {
+            res.send('Produit non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération des produit:', error);
+        return null;
+    }
+}
+
+
+async function getAllProductByPrix(req ,res) {
+
+    const recherche = req.params.recherche
+
+    try {
+        const Product = await produitModel.Produit.findAll({
+            where: {prix: recherche}
+
+        });
+        if (Product) {
+            res.json(Product);
+        } else {
+            res.send('Produit non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération des produit:', error);
+        return null;
+    }
+}
+
+
+
+
 async function deleteproduit(req,res){
     const id = req.params.id;
     await produitModel.Produit.destroy({ where: { id_produit: id } });
@@ -162,5 +208,5 @@ async function update_image_produit(req,res){
 
 module.exports={insert_produit,getProductById,deleteproduit,update_nom_produit,
     update_description_produit,update_prix_produit,
-    update_categorie_produit,update_image_produit,getAllProduct};
+    update_categorie_produit,update_image_produit,getAllProduct,getAllProductByCategorie,getAllProductByPrix};
 

@@ -48,6 +48,27 @@ async function getSalarierCESIById(req ,res) {
 
 
 
+async function getAllSalarierCESI(req ,res) {
+
+
+
+
+    try {
+        const salariercesi = await salarierCESIModel.salarierCESI.findAll({
+            order: [['nom', 'DESC']],
+        });
+        if (salariercesi) {
+            res.json(salariercesi);
+
+        } else {
+            res.send('salarierCESI non trouvé');
+            return null;
+        }
+    } catch (error) {
+        console.log('Erreur lors de la récupération du salarierCESI:', error);
+        return null;
+    }
+}
 
 
 
@@ -56,4 +77,6 @@ async function getSalarierCESIById(req ,res) {
 
 
 
-module.exports={insert_salarierCESI,getSalarierCESIById};
+
+
+module.exports={insert_salarierCESI,getSalarierCESIById,getAllSalarierCESI};
