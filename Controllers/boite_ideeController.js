@@ -8,7 +8,8 @@ const {boite_idee} = require("../models/boite_ideeModel");
      boite_ideeModel.Boite_idee.create({
             id_etudiant: data.id_etudiant,
             nbr_vote: data.nbr_vote,
-            idee: data.idee
+            idee: data.idee,
+            titre:data.titre
 
         })
             .then(book => {

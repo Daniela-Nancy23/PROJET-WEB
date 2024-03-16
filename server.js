@@ -60,13 +60,13 @@ app.use("/genere_token",route_generate_token.generateToken());
 app.use("/produit",verifyToken.verifyAuthToken ,routes_produit.produit());
 
 //route etudiant
-app.use("/etudiant",verifyToken.verifyAuthToken,routes_etudiant.etudiant());
+app.use("/etudiant",routes_etudiant.etudiant());
 
 //route menbreBDE
-app.use("/menbreBDE",verifyToken.verifyAuthToken,routes_menbreBDE.menbreBDE());
+app.use("/menbreBDE",routes_menbreBDE.menbreBDE());
 
 // route salarierCESI
-app.use("/salarierCESI",verifyToken.verifyAuthToken,routes_salarierCESI.salarierCESI());
+app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
 
 //route manifestation
 app.use("/manifestion",verifyToken.verifyAuthToken,routes_manifestion.manifestation());

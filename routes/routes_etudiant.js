@@ -3,7 +3,6 @@ const router = express.Router();
 const etudiantcontroller= require('../Controllers/etudiantController');
 
 
-
 function etudiant(){
 
     //route permettant d'inserer  un etudiant dans la BD

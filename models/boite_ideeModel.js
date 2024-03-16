@@ -33,6 +33,11 @@ const Boite_idee = sequelize.define('boite_idee', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    titre: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+
 
 
 

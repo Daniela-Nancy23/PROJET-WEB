@@ -1,9 +1,10 @@
-import jwt from "jsonwebtoken";
+
+const jwt = require('jsonwebtoken');
 
 function verifyAuthToken(req, res, next) {
-    const authHeader = req.header('authorization');
+    const authHeader = req.headers['authorization'];
     if (authHeader) {
-        jwt.verify(authHeader, secret, (err, decoded) => {
+        jwt.verify(authHeader, 'groupe1', (err, decoded) => {
             if (err) {
                 return res.status(401).send({ message: 'Authentication failed! Please try again :(' });
             }
