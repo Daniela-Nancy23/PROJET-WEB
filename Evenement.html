@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evénements</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/Evenement.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <nav>
+                <ul>
+                    <button id="bouton-afficher"><img src="image/icone.png" alt=""></button>
+                    <div id="groupe-boutons" style="display: none;">
+                        <button>Login</button>
+                        <button>Logout</button>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <h2>EVENEMENTS</h2>
+    </header>
+
+    <main>
+        <section class="evenements">
+            <h2>Liste des événements</h2>
+
+            <ul>
+                <li>
+                    <div class="image">
+                        <img src="image/E1.Jpg" alt="Evénement 1">
+                    </div>
+
+                    <div class="infos">
+                        <h3>Evénement 1</h3>
+
+                        <p>Description de l'événement 1</p>
+
+                        <p>Date : 01/01/2024</p>
+
+                        <div class="div">
+                            <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="Plus d'info.html">Plus d'infos</a></button>
+                        <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="#">j'y participe</a></button>
+                        </div>
+                        
+                    </div>
+
+                    <div class="ajoute">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <label for="event_image"><img src="image/photo.svg" alt=""></label>
+                            <input type="file" id="event_image" name="event_image">
+                            <input type="submit" value="Envoyer"style="background-color:#ff8c12;">
+                        </form>
+                    </div>
+                </li>
+
+                <nav class="nav">
+                    <div class="likes">
+                        <button 1>
+                            <i class="" alt="fa fa-heart"><img class="bouton-like" src="image/like.svg"></i>
+                            <span class="nombre-likes"></span>
+                        </button>
+                    
+                        <span class="liste-utilisateurs">
+                            <span class="utilisateur"></span>.
+                        </span>
+                    </div>
+    
+                    <i class="icone-commentaire fa fa-comment"><img src="image/commentaire.svg" alt=""></i>
+                        <div class="contenu-commentaire" style="display: none;">
+                          <form action="#" method="post">
+                            <textarea id="commentaire" name="commentaire" placeholder="Votre commentaire ici"></textarea>
+                            <input type="submit" value="Envoyer" style="background-color: #ff8c12;">
+                          </form>
+                       </div>
+                </nav>
+                
+                <br>
+
+                <br>
+                
+                <li>
+                    <div class="image">
+                        <img src="image/E2.jpg" alt="Evénement 2">
+                    </div>
+
+                    <div class="infos">
+                        <h3>Evénement 2</h3>
+
+                        <p>Description de l'événement 2</p>
+
+                        <p>Date : 02/02/2024</p>
+
+                        <div class="div">
+                            <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="Plus d'info.html">Plus d'infos</a></button>
+                        <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="#">j'y participe</a></button>
+                        </div>
+                    </div>
+
+                    <div class="ajoute">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <label for="event_image"><img src="image/photo.svg" alt=""></label>
+                            <input type="file" id="event_image" name="event_image">
+                            <input type="submit" value="Envoyer"style="background-color: #ff8c12;">
+                        </form>
+                    </div>
+                </li>
+
+                <nav class="nav">
+                    <div class="likes">
+                        <button >
+                            <i class="" alt="fa fa-heart"><img class="bouton-like" src="image/like.svg"></i>
+                            <span class="nombre-likes"></span>
+                        </button>
+                    
+                        <span class="liste-utilisateurs">
+                            <span class="utilisateur"></span>.
+                        </span>
+                    </div>
+    
+                    <i class="icone-commentaire fa fa-comment"><img src="image/commentaire.svg" alt=""></i>
+                        <div class="contenu-commentaire" style="display: none;">
+                          <form action="#" method="post">
+                            <textarea id="commentaire" name="commentaire" placeholder="Votre commentaire ici"></textarea>
+                            <input type="submit" value="Envoyer" style="background-color: #ff8c12;">
+                          </form>
+                       </div>
+                </nav>
+                
+                <br>
+
+                <br>
+
+                <li>
+                    <div class="image">
+                        <img src="image/E3.jpg" alt="Evénement 3">
+                    </div>
+
+                    <div class="infos">
+                        <h3>Evénement 3</h3>
+
+                        <p>Description de l'événement 3</p>
+
+                        <p>Date : 03/03/2024</p><br>
+
+                        <div class="div">
+                            <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="Plus d'info.html">Plus d'infos</a></button>
+                        <button class="bouton-envoi" style="background-color: #ff8c12;"> <a href="#">j'y participe</a></button>
+                        </div>
+                             </div>
+
+                             <div class="ajoute">
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <label for="event_image"><img src="image/photo.svg" alt=""></label>
+                                    <input type="file" id="event_image" name="event_image">
+                                    <input type="submit" value="Envoyer" style="background-color: #ff8c12;">
+                                </form>
+                            </div>
+                </li>
+
+                <nav class="nav">
+                    <div class="likes">
+                        <button >
+                            <i class="" alt="fa fa-heart"><img class="bouton-like" src="image/like.svg"></i>
+                            <span class="nombre-likes"></span>
+                        </button>
+                    
+                        <span class="liste-utilisateurs">
+                            <span class="utilisateur"></span>.
+                        </span>
+                    </div>
+    
+                    <i class="icone-commentaire fa fa-comment"><img src="image/commentaire.svg" alt=""></i>
+                        <div class="contenu-commentaire" style="display: none;">
+                          <form action="#" method="post">
+                            <textarea id="commentaire" name="commentaire" placeholder="Votre commentaire ici"></textarea>
+                            <input type="submit" value="Envoyer" style="background-color: #ff8c12;">
+                          </form>
+                       </div>
+                </nav>
+
+                <br>
+            </ul>
+        </section>
+        
+        <script src="js/Evenement.js"></script>
+        <script src="js/Plus d'info.js"></script>
+        
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 BDE CESI. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
