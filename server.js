@@ -10,6 +10,7 @@ app.use(cors());
 
 
 const set_CORS=require("./middlewares/set_CORS")
+const verifyToken=require("./middlewares/verifyToken")
 const produitModel = require("./models/produitModel");
 const routes_produit=require("./routes/routes_produit");
 const routes_etudiant=require("./routes/routes_etudiant");
@@ -24,6 +25,8 @@ const routes_Like_evenement=require("./routes/routes_Like_evenement");
 const routes_photo_evenement=require("./routes/routes_photo_evenement");
 const routes_commentaire_evenement=require("./routes/routes_commentaire_evenement");
 const routes_inscrit_manifestion=require("./routes/routes_inscrit_manifestion");
+const route_generate_token=require("./routes/route_generate_token");
+
 
 
 
@@ -50,47 +53,49 @@ produitModel.sequelize.sync({ force: false })
     });
 
 
+// route genere token
+app.use("/genere_token",route_generate_token.generateToken());
 
 //route produit
-app.use("/produit",routes_produit.produit());
+app.use("/produit",verifyToken.verifyAuthToken ,routes_produit.produit());
 
 //route etudiant
-app.use("/etudiant",routes_etudiant.etudiant());
+app.use("/etudiant",verifyToken.verifyAuthToken,routes_etudiant.etudiant());
 
 //route menbreBDE
-app.use("/menbreBDE",routes_menbreBDE.menbreBDE());
+app.use("/menbreBDE",verifyToken.verifyAuthToken,routes_menbreBDE.menbreBDE());
 
 // route salarierCESI
-app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
+app.use("/salarierCESI",verifyToken.verifyAuthToken,routes_salarierCESI.salarierCESI());
 
 //route manifestation
-app.use("/manifestion",routes_manifestion.manifestation());
+app.use("/manifestion",verifyToken.verifyAuthToken,routes_manifestion.manifestation());
 
 //route categorie
-app.use("/categorie",routes_categorie.Categorie());
+app.use("/categorie",verifyToken.verifyAuthToken,routes_categorie.Categorie());
 
 //route idee
-app.use("/idee",routes_boite_idees.boite_idee());
+app.use("/idee",verifyToken.verifyAuthToken,routes_boite_idees.boite_idee());
 
 //route commande
-app.use("/idee",routes_commande.commande());
+app.use("/idee",verifyToken.verifyAuthToken,routes_commande.commande());
 
 
 //route evenement_passer
-app.use("/evenement_passer",routes_evenement_passer.evenement_passer());
+app.use("/evenement_passer",verifyToken.verifyAuthToken,routes_evenement_passer.evenement_passer());
 
 //route like_evenement
-app.use("/like_evenement",routes_Like_evenement.like_evenement());
+app.use("/like_evenement",verifyToken.verifyAuthToken,routes_Like_evenement.like_evenement());
 
 //route photo_evenement
-app.use("/photo_evenement",routes_photo_evenement.photo_evenement());
+app.use("/photo_evenement",verifyToken.verifyAuthToken,routes_photo_evenement.photo_evenement());
 
 //route commentaire_evenement
-app.use("/commentaire_evenement",routes_commentaire_evenement.commentaire_evenement());
+app.use("/commentaire_evenement",verifyToken.verifyAuthToken,routes_commentaire_evenement.commentaire_evenement());
 
 
 //route inscrit_manifestation
-app.use("/inscrit_manifestation",routes_inscrit_manifestion.inscrit_manifestation());
+app.use("/inscrit_manifestation",verifyToken.verifyAuthToken,routes_inscrit_manifestion.inscrit_manifestation());
 
 
 
