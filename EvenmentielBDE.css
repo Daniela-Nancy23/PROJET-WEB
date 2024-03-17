@@ -32,6 +32,7 @@ svg{
 }
 .svg{
     display:flex;
+    
 }
 .carousel-item img {
     max-width: 100%;
@@ -42,5 +43,69 @@ svg{
     display: flex;
     align-items: center; /* Centrez verticalement les images */
 }
+.infos{
+    margin-left:350px;
+    margin-top:30px;
+    font-size: 14px;
+}
+.h2{
+    font-size:3px;
+}
+#carouselExampleSlidesOnly1 {
+    width: 300px;
+    height: 300px;
+    overflow:hidden;
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    z-index: 1000; /* Assurez-vous que le carrousel est au-dessus des autres éléments */
+}
+.infos1{
+    margin-left:350px;
+    margin-top:130px;
+    font-size: 14px;
+}
+.svg_3{
+    margin-left:170px;
+}
+.svg_2{
+    margin-left:30px;
+}
+.button{
+    border-radius:5px;
+    background-color:#F0811A;
+}
+.bas{
+    margin-top:90px;
+    margin-left:470px;
+    justify-content:space-between;
 
+}
+.decote{
+    margin-left:600px;
+}
+input{display:none;}
+/* Styles pour les écrans plus petits que 768px (tablettes et téléphones) */
+@media only screen and (max-width: 768px) {
+    .carousel-inner {
+        height: 200px; /* Réduire la hauteur du carousel */
+    }
 
+    .carousel-inner img {
+        height: 200px; /* Adapter la taille des images du carousel */
+    }
+
+    .infos,
+    .infos1 {
+        text-align: center; /* Centrer le texte dans les sections d'infos */
+    }
+
+    .decote {
+        display: flex;
+        flex-direction: column; /* Afficher les boutons et l'upload en colonnes */
+    }
+
+    .button {
+        margin-bottom: 10px; /* Ajouter un espace entre les boutons */
+    }
+}
