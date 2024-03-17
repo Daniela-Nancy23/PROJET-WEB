@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="produit.css">
+        <title>produitBDE</title>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="card">
+                <h1>Bienvenue UTILISATEUR</h1>
+                <p>@campbellito</p>
+
+                <img src="images/profile.png" id="profile-pic">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label class="la1" for="prix">prix du produit:</label>
+                <input type="text" name="prix" id="prix"
+                    pattern="^\$\d+(\.\d{2})?$" required>
+                <label for="description">Commentaire :</label>
+                <textarea id="description" name="description" rows="4" cols="50"
+                    required></textarea>
+
+                <label class="la2" for="input-file">Insérer l'image</label>
+                <input class="in2" type="file"
+                    accept="images/jpeg, image/png, image/jpg" id="input-file">
+
+            </div>
+
+        </div>
+        <script>
+        let profilePic=document.getElementById("profile-pic");
+        let inputFile=document.getElementById("input-file");
+        inputFile.onchange=function(){
+            profilePic.src=URL.createObjectURL(inputFile.files[0]);
+        }
+    </script>
+    </body>
+</html>
