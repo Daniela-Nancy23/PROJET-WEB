@@ -33,6 +33,14 @@ const menbreBDE = sequelize.define('menbreBDE', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    image: {
+        type: DataTypes.STRING,
+
+    },
+    post: {
+        type: DataTypes.STRING,
+
+    },
 
 
 },{

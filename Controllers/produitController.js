@@ -10,7 +10,9 @@ const {Produit} = require("../models/produitModel");
             description: data.description,
             prix: data.prix,
             categorie: data.categorie,
-            image: data.image
+            image: data.image,
+            souscategorie: data.souscategorie,
+            id_menbreBDE:data.id_menbreBDE
 
         })
             .then(book => {

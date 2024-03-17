@@ -57,7 +57,7 @@ produitModel.sequelize.sync({ force: false })
 app.use("/genere_token",route_generate_token.generateToken());
 
 //route produit
-app.use("/produit",verifyToken.verifyAuthToken ,routes_produit.produit());
+app.use("/produit" ,routes_produit.produit());
 
 //route etudiant
 app.use("/etudiant",routes_etudiant.etudiant());
@@ -72,12 +72,12 @@ app.use("/salarierCESI",routes_salarierCESI.salarierCESI());
 app.use("/manifestion",verifyToken.verifyAuthToken,routes_manifestion.manifestation());
 
 //route categorie
-app.use("/categorie",verifyToken.verifyAuthToken,routes_categorie.Categorie());
+app.use("/categorie",routes_categorie.Categorie());
 
 //route idee
 app.use("/idee",verifyToken.verifyAuthToken,routes_boite_idees.boite_idee());
 
-//route commande
+//route commandeprojet_web
 app.use("/idee",verifyToken.verifyAuthToken,routes_commande.commande());
 
 

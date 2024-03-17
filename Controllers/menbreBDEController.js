@@ -10,7 +10,9 @@ async function insert_menbreBDE(req,res) {
         nom: data.nom,
         prenom: data.prenom,
         localisation: data.localisation,
-        motDePasse: data.password
+        motDePasse: data.password,
+        image:data.imag,
+        post:data.post
     })
         .then(book => {
             console.log('menbreBDE ajouter avec succès:', menbreBDE);

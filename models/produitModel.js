@@ -19,6 +19,13 @@ const Produit = sequelize.define('produit', {
         allowNull: false,
         primaryKey: true
     },
+    id_menbreBDE:{
+        type: DataTypes.STRING,
+        allowNull: false
+
+    },
+
+
     nom: {
         type: DataTypes.STRING,
         allowNull: false
@@ -36,6 +43,10 @@ const Produit = sequelize.define('produit', {
         allowNull: false
     },
     image: {
+        type: DataTypes.STRING,
+
+    },
+    souscategorie: {
         type: DataTypes.STRING,
 
     },
