@@ -1,0 +1,85 @@
+nav{
+    background-color:#F0811A;
+}
+.modif{
+    text-decoration:none;
+    color:white;
+    margin-bottom:3px;
+    font-size:12px;
+}
+.user{
+    margin-left: 1090px;
+}
+svg{
+    margin-left:2px;   
+}
+.grande{
+    display:flex;
+    align-items:flex-start
+}
+.event{
+    bottom:3px;
+}
+h1{
+    display:flex;
+    font-size:18px;
+    align-items:flex-start;
+}
+.container{
+    width: auto;
+    height: auto;
+    background-color: gray;
+}
+.cont{
+    position: absolute;
+    top: 500px;
+    left: 1190px;
+}
+.avis{
+    text-decoration: none;
+    color:black;
+
+}
+#mon-svg{
+    background-color:white;
+    cursor: pointer;
+}
+/* Styles par défaut */
+
+/* Ajoutez vos styles existants ici */
+
+/* Media queries pour les petits écrans */
+@media only screen and (max-width: 768px) {
+  .grande {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .cont {
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Media queries pour les très petits écrans */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 14px;
+  }
+  .cont {
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
