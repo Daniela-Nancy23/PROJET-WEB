@@ -38,5 +38,48 @@ h1{
 .avis{
     text-decoration: none;
     color:black;
-    
+
+}
+#mon-svg{
+    background-color:white;
+    cursor: pointer;
+}
+/* Styles par défaut */
+
+/* Ajoutez vos styles existants ici */
+
+/* Media queries pour les petits écrans */
+@media only screen and (max-width: 768px) {
+  .grande {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .cont {
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Media queries pour les très petits écrans */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 14px;
+  }
+  .cont {
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
