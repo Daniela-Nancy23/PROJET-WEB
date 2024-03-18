@@ -75,10 +75,10 @@ app.use("/manifestion",verifyToken.verifyAuthToken,routes_manifestion.manifestat
 app.use("/categorie",routes_categorie.Categorie());
 
 //route idee
-app.use("/idee",verifyToken.verifyAuthToken,routes_boite_idees.boite_idee());
+app.use("/idee",routes_boite_idees.boite_idee());
 
 //route commandeprojet_web
-app.use("/idee",verifyToken.verifyAuthToken,routes_commande.commande());
+app.use("/commande",verifyToken.verifyAuthToken,routes_commande.commande());
 
 
 //route evenement_passer

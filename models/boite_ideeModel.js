@@ -25,11 +25,8 @@ const Boite_idee = sequelize.define('boite_idee', {
         allowNull: false
 
     },
-    nbr_vote: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    idee: {
+
+    description: {
         type: DataTypes.STRING,
         allowNull: false
     },

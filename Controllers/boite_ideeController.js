@@ -3,17 +3,16 @@ const {boite_idee} = require("../models/boite_ideeModel");
 
 
  async function insert_idee(req,res) {
-     const data = req.body; // Les données à insérer
+     const data = req.body.data; // Les données à insérer
 
      boite_ideeModel.Boite_idee.create({
             id_etudiant: data.id_etudiant,
-            nbr_vote: data.nbr_vote,
-            idee: data.idee,
+         description: data.description,
             titre:data.titre
 
         })
             .then(book => {
-                console.log(' votre idee a ete ajouter avec succès:', Produit);
+                console.log(' votre idee a ete ajouter avec succès:', boite_idee);
                 res.send(`Idee inserer avec success`);
             })
             .catch(error => {
@@ -32,7 +31,7 @@ async function getAllIdee(req ,res) {
 
     try {
         const idees = await boite_ideeModel.Boite_idee.findAll({
-            order: [['idee', 'DESC']],
+            order: [['titre', 'DESC']],
 
         });
         if (idees) {
