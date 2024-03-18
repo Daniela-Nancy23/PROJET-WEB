@@ -78,11 +78,11 @@ app.use("/categorie",routes_categorie.Categorie());
 app.use("/idee",routes_boite_idees.boite_idee());
 
 //route commandeprojet_web
-app.use("/commande",verifyToken.verifyAuthToken,routes_commande.commande());
+app.use("/commande",routes_commande.commande());
 
 
 //route evenement_passer
-app.use("/evenement_passer",verifyToken.verifyAuthToken,routes_evenement_passer.evenement_passer());
+app.use("/evenement_passer",routes_evenement_passer.evenement_passer());
 
 //route like_evenement
 app.use("/like_evenement",verifyToken.verifyAuthToken,routes_Like_evenement.like_evenement());

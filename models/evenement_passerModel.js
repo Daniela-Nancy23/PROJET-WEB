@@ -9,7 +9,6 @@ const sequelize = new Sequelize(
     }
 );
 
-const etudaintModel=require("./etudaintModel");
 const ManifestationModel=require("./ManifestationModel");
 
 
@@ -19,6 +18,11 @@ const evenement_passer = sequelize.define('evenement_passer', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+    },
+    id_manifestation: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+
     },
     date_debut: {
         type: DataTypes.DATE,
@@ -38,7 +42,7 @@ const evenement_passer = sequelize.define('evenement_passer', {
 
 });
 
-evenement_passer.belongsTo(etudaintModel.Etudiant, { foreignKey: 'id_etudiant' });
+ManifestationModel.Manifestation.hasMany(evenement_passer, { foreignKey: 'id_manifestation' });
 evenement_passer.belongsTo(ManifestationModel.Manifestation, { foreignKey: 'id_manifestation' });
 
 

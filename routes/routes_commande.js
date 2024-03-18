@@ -18,7 +18,7 @@ function commande(){
     router.get('/:id',commandeController.getCommandeByUser);
 
     //route permettant de supprimer une commande dans la BD
-    router.delete('/:id',commandeController.deleteCommande);
+    router.delete('/delete/:id',commandeController.deleteCommande);
 
 
 

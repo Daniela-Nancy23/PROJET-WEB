@@ -42,8 +42,14 @@ const Commande = sequelize.define('commande', {
 
 });
 
+etudaintModel.Etudiant.hasMany(Commande, { foreignKey: 'id_etudiant' });
 Commande.belongsTo(etudaintModel.Etudiant, { foreignKey: 'id_etudiant' });
+
+
+
+produitModel.Produit.hasMany(Commande, { foreignKey: 'id_produit' });
 Commande.belongsTo(produitModel.Produit, { foreignKey: 'id_produit' });
+
 
 
 

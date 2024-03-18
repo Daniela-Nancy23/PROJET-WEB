@@ -12,7 +12,7 @@ const produitModel = require("../models/produitModel");
             nom: data.nom,
         })
             .then(book => {
-                console.log(' votre Commande a ete ajouter avec succès:', Produit);
+                console.log(' votre Commande a ete ajouter avec succès:', commande);
                 res.send(`Commande inserer avec success`);
             })
             .catch(error => {
@@ -34,6 +34,7 @@ async function getAllICommande(req ,res) {
             order: [['nom', 'DESC']],
 
         });
+
         if (commande) {
             res.json(commande);
        } else {
@@ -54,8 +55,11 @@ async function getCommandeByUser(req ,res) {
 
     try {
         const Commande = await commandeModel.Commande.findAll({
-            where: {id_etudiant: id},
+            where: { id_etudiant: id}, // Remplacez idClient par l'ID du client spécifique
+            include: [{
+                model:produitModel.Produit,
 
+            }]
         });
         if (Commande) {
 

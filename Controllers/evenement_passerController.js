@@ -1,5 +1,6 @@
 const evenement_passerModel = require('../models/evenement_passerModel');
 const {evenement_passer} = require("../models/evenement_passerModel");
+const ManifestationModel = require('../models/ManifestationModel');
 
 
 async function insert_evenement_passer(req,res) {
@@ -7,7 +8,6 @@ async function insert_evenement_passer(req,res) {
 
     evenement_passerModel.evenement_passer.create({
         id_manifestation:data.id_manifestation,
-        id_etudiant:data.id_etudiant,
         date_debut: data.date_debut,
         date_fin: data.date_fin,
     })
@@ -28,10 +28,13 @@ async function insert_evenement_passer(req,res) {
 
 async function getAllevenement_passer(req ,res) {
     try {
-        const evenement_passer = await evenement_passerModel.evenement_passer.findAll({
-            order: [['id', 'DESC']],
-
-        });
+        const evenement_passer = await ManifestationModel.Manifestation.findAll({
+            include: [
+                {
+                    model: evenement_passerModel.evenement_passer,
+                }
+            ]
+        })
         if (evenement_passer) {
             res.json(evenement_passer);
 
